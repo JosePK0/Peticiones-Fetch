@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <li><a href="../Portada/index.html">Inicio</a></li>
+        <h1 class="text-center mb-4 text-primary">Lista de Productos</h1>
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" id="searchQuery" class="form-control" placeholder="Buscar producto...">
+                    <div class="input-group-append">
+                        <button id="searchBtn" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="productList" class="row"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

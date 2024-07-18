@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pokemonEvolution.innerHTML = getEvolutionChainImages(evolutionChain.chain).join('');
             pokemonMoves.innerHTML = pokemonData.moves.slice(0, 3).map(move => `<li>${move.move.name}</li>`).join('');
         } catch (error) {
-            console.error('Error poke data:', error);
+            console.error('Error data:', error);
             alert('Pokémon no encontrado');
         }
     };
@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     searchButton.addEventListener('click', async () => {
-        const id = pokemonNumberInput.value;
-        if (id) {
+        const id = parseInt(pokemonNumberInput.value);
+        if (!isNaN(id)) {
             try {
                 await updatePokemonData(id);
             } catch (error) {
